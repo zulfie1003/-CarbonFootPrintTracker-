@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Tracker - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Carbon Footprint Tracker</div>
+        <div class="nav-links">
+            <a href="home.html" class="active">Home</a>
+            <a href="target.html">Targets</a>
+            <a href="global.html">Global Data</a>
+            <a href="progress.html">Progress</a>
+            <a href="awareness.html" target="_blank">Awareness</a>
+            <a href="contact.html" target="_blank">Contact</a>
+            <a href="blog.html" target="_blank">Blog</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Track Your Carbon Footprint</h1>
+            <p>Make informed decisions to reduce your environmental impact</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" alt="Sustainable Living">
+        </div>
+    </section>
+
+    <section class="calculator">
+        <h2>Calculate Your Carbon Footprint</h2>
+        <form class="carbon-form">
+            <div class="form-group">
+                <label for="car-miles">Daily Car Travel (miles)</label>
+                <input type="number" id="car-miles" min="0" step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="public-transport">Public Transport Usage (days/week)</label>
+                <input type="number" id="public-transport" min="0" max="7">
+            </div>
+            <div class="form-group">
+                <label for="diet">Diet Type</label>
+                <select id="diet">
+                    <option value="vegan">Vegan</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="omnivore">Omnivore</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="electricity">Monthly Electricity Usage (kWh)</label>
+                <input type="number" id="electricity" min="0">
+            </div>
+            <div class="form-group">
+                <label for="flights">Flights per Year</label>
+                <input type="number" id="flights" min="0">
+            </div>
+            <button type="submit" class="calculate-btn">Calculate Footprint</button>
+        </form>
+    </section>
+
+    <section class="results">
+        <div class="result-card">
+            <h2>Your Carbon Footprint</h2>
+            <div class="result-value">
+                <span id="footprint-value">0</span>
+                <span class="unit">tons CO₂/year</span>
+            </div>
+            <p class="result-comparison">This is <span id="comparison-text">equal to</span> the average person's footprint</p>
+            <div class="result-tips">
+                <h3>Quick Tips to Reduce Your Footprint</h3>
+                <ul>
+                    <li>Switch to renewable energy sources</li>
+                    <li>Use public transportation more often</li>
+                    <li>Reduce meat consumption</li>
+                    <li>Minimize air travel</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <a href="target.html" class="stat-card">
+            <h3>🌍 Target</h3>
+            <div class="stat-value">2.0</div>
+            <div class="stat-label">tons CO₂/year</div>
+            <div class="progress-details">
+                <span class="progress-icon">📊</span>
+                <span class="progress-text">View Target Details</span>
+            </div>
+        </a>
+        <a href="global.html" class="stat-card">
+            <h3>🌎 Global Average</h3>
+            <div class="stat-value">4.8</div>
+            <div class="stat-label">tons CO₂/year</div>
+            <div class="progress-details">
+                <span class="progress-icon">📊</span>
+                <span class="progress-text">View Global Data</span>
+            </div>
+        </a>
+        <a href="progress.html" class="stat-card">
+            <h3>📈 Your Progress</h3>
+            <div class="stat-value">3.5</div>
+            <div class="stat-label">tons CO₂/year</div>
+            <div class="progress-details">
+                <span class="progress-icon">📊</span>
+                <span class="progress-text">View Your Progress</span>
+            </div>
+        </a>
+    </section>
+
+    <section class="awareness">
+        <div class="awareness-header">
+            <h2>🌍 Climate Awareness</h2>
+            <p>Understanding the impact of our daily choices on the environment</p>
+        </div>
+        <div class="awareness-grid">
+            <div class="awareness-card">
+                <div class="awareness-icon">🚗</div>
+                <h3>Transportation Impact</h3>
+                <p>Learn how your travel choices affect carbon emissions</p>
+                <div class="awareness-stats">
+                    <div class="stat">
+                        <span class="stat-value">2.4</span>
+                        <span class="stat-label">tons CO₂/year</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">28%</span>
+                        <span class="stat-label">of total emissions</span>
+                    </div>
+                </div>
+                <a href="awareness.html#transportation" class="learn-more">Learn More →</a>
+            </div>
+            <div class="awareness-card">
+                <div class="awareness-icon">⚡</div>
+                <h3>Energy Consumption</h3>
+                <p>Discover the carbon footprint of your energy usage</p>
+                <div class="awareness-stats">
+                    <div class="stat">
+                        <span class="stat-value">1.8</span>
+                        <span class="stat-label">tons CO₂/year</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">25%</span>
+                        <span class="stat-label">of total emissions</span>
+                    </div>
+                </div>
+                <a href="awareness.html#energy" class="learn-more">Learn More →</a>
+            </div>
+            <div class="awareness-card">
+                <div class="awareness-icon">🍽️</div>
+                <h3>Food & Diet</h3>
+                <p>Understand how your food choices impact the environment</p>
+                <div class="awareness-stats">
+                    <div class="stat">
+                        <span class="stat-value">1.5</span>
+                        <span class="stat-label">tons CO₂/year</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">20%</span>
+                        <span class="stat-label">of total emissions</span>
+                    </div>
+                </div>
+                <a href="awareness.html#food" class="learn-more">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Carbon Footprint Tracker</h3>
+                <p>Helping you make sustainable choices for a better future.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">🌍</a>
+                    <a href="#" class="social-link">📱</a>
+                    <a href="#" class="social-link">📧</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="target.html">Targets</a></li>
+                    <li><a href="global.html">Global Data</a></li>
+                    <li><a href="progress.html">Progress</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Carbon Calculator</a></li>
+                    <li><a href="#">Sustainability Tips</a></li>
+                    <li><a href="#">Climate News</a></li>
+                    <li><a href="#">Research</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li>📧 info@carbonfootprint.com</li>
+                    <li>📞 +1 (555) 123-4567</li>
+                    <li>📍 123 Green Street, Eco City</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Leadership</h3>
+                <div class="ceo-card">
+                    <img src="https://cursor.sh/logo.png" alt="CEO" class="ceo-image">
+                    <div class="ceo-info">
+                        <h4>Zulfiquar Ali</h4>
+                        <p>Chief Executive Officer</p>
+                        <a href="ceo.html" target="_blank" class="ceo-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Carbon Footprint Tracker. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

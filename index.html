@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Carbon Footprint Tracker</h1>
+            <p>Calculate your daily carbon emissions and get personalized tips to reduce your impact</p>
+            <a href="home.html" class="nav-link">← Back to Home</a>
+        </header>
+
+        <main>
+            <form id="carbonForm">
+                <section class="form-section">
+                    <h2>Transportation</h2>
+                    <div class="input-group">
+                        <label for="carDistance">Car Distance (km/day)</label>
+                        <input type="number" id="carDistance" min="0" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="busDistance">Bus Distance (km/day)</label>
+                        <input type="number" id="busDistance" min="0" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label for="bikeDistance">Bike Distance (km/day)</label>
+                        <input type="number" id="bikeDistance" min="0" step="0.1">
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2>Diet</h2>
+                    <div class="input-group">
+                        <label for="dietType">Diet Type</label>
+                        <select id="dietType">
+                            <option value="meat">Meat-based</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2>Energy Usage</h2>
+                    <div class="input-group">
+                        <label for="electricity">Electricity Usage (kWh/day)</label>
+                        <input type="number" id="electricity" min="0" step="0.1">
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2>Flights</h2>
+                    <div class="input-group">
+                        <label for="flights">Number of Flights (per month)</label>
+                        <input type="number" id="flights" min="0" step="1">
+                    </div>
+                </section>
+
+                <button type="submit" class="calculate-btn">Calculate My Footprint</button>
+            </form>
+
+            <div id="results" class="hidden">
+                <h2>Your Carbon Footprint</h2>
+                <div class="result-card">
+                    <div class="total-emissions">
+                        <h3>Daily Emissions</h3>
+                        <p id="dailyEmissions" class="emission-value">0 kg CO₂</p>
+                    </div>
+                    <div class="comparison">
+                        <h3>Compared to Global Average</h3>
+                        <p id="comparisonText">You're doing great!</p>
+                    </div>
+                </div>
+
+                <div class="tips-section">
+                    <h3>Tips to Reduce Your Footprint</h3>
+                    <ul id="tipsList"></ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ for a greener planet</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
